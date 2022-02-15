@@ -1,0 +1,12 @@
+<h1>All of the Pets Found</h1>
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+     <p><%= link_to pet.name, pet_path(pet) %>- species: <%= pet.species %> - Pet_found_on: <%= pet.found_on %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to new_pet_path do %>
+<i class="fa-solid fa-plus"></i>
+<% end %>

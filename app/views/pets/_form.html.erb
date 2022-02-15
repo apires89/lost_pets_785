@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: ["dog","cat","mouse","lion"], include_blank: false %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+</div>
+

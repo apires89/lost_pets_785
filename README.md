@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CRUD
+Create
+Read
+Update
+Destroy
 
-Things you may want to cover:
+As a user i can see all the found pets
+Pet.all
+pets#index
+GET
 
-* Ruby version
+As a user i can see details about one found pet
+Pet.find(params[:id])
+pets#show
+GET
 
-* System dependencies
+As a user i can add a pet i found
+Pet.create(pet_params)
+2 verbs GET + POST
+pets#new
+pets#create
 
-* Configuration
+As a user i can update a pet i found
+Pet.update(pet_params)
+2 verbs GET + PATCH
+pets#edit
+pets#update
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As a user i can delete a pet from the app
+Pet.find(params[:id]).destroy
+pets#destroy
+DELETE

@@ -1,0 +1,13 @@
+<h1>Show Page of the <%= @pet.name %></h1>
+<% if @pet.address %>
+  <h2><%= @pet.address %></h2>
+<% else %>
+   <h2>It has no address</h2>
+<% end %>
+  <p><%= @pet.name %>- species: <%= @pet.species %></p>
+  <p>Pet_found_on: <%= @pet.found_on %></p>
+
+  <%= link_to pet_path(@pet), method: :delete, data: {confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash"></i>
+  <% end %>
+
